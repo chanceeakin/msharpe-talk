@@ -4,6 +4,7 @@ module.exports = {
     title: `Career Day Fireside`,
     date: `April 27, 2018`
   },
+  pathPrefix: `/ben-talk`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
