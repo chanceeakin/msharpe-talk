@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Link, { navigateTo } from 'gatsby-link';
-import Helmet from 'react-helmet';
-import Swipeable from 'react-swipeable';
-
-import './index.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Link, { navigateTo } from "gatsby-link";
+import Helmet from "react-helmet";
+import Swipeable from "react-swipeable";
 import "prismjs/themes/prism-okaidia.css";
+import SVGDiv from "./../components/SVGDiv";
 
+import "./index.css";
 
 const Header = ({ name, title, date }) => (
   <header>
@@ -34,7 +34,7 @@ class TemplateWrapper extends Component {
 
     const slides = this.props.data.allMarkdownRemark.edges.filter(
       ({ node }) => {
-        const id = node.fileAbsolutePath.replace(/^.*[\\\/]/, '').split('.')[0];
+        const id = node.fileAbsolutePath.replace(/^.*[\\\/]/, "").split(".")[0];
 
         if (id && id !== 404) {
           return true;
@@ -56,11 +56,11 @@ class TemplateWrapper extends Component {
   };
 
   componentDidMount() {
-    document.addEventListener('keydown', this.navigate);
+    document.addEventListener("keydown", this.navigate);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.navigate);
+    document.removeEventListener("keydown", this.navigate);
   }
 
   render() {
@@ -68,8 +68,9 @@ class TemplateWrapper extends Component {
     return (
       <div>
         <Helmet
-          title={`${data.site.siteMetadata.title} — ${data.site.siteMetadata
-            .name}`}
+          title={`${data.site.siteMetadata.title} — ${
+            data.site.siteMetadata.name
+          }`}
         />
         <Header
           name={data.site.siteMetadata.name}
@@ -80,7 +81,10 @@ class TemplateWrapper extends Component {
           onSwipingLeft={this.swipeLeft}
           onSwipingRight={this.swipeRight}
         >
-          <div id="slide">{children()}</div>
+          <div id="slide">
+            <SVGDiv />
+            {children()}
+          </div>
         </Swipeable>
       </div>
     );
@@ -89,7 +93,7 @@ class TemplateWrapper extends Component {
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-  data: PropTypes.object,
+  data: PropTypes.object
 };
 
 export default TemplateWrapper;

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    name: `Chance Eakin`,
-    title: `Career Day Fireside`,
-    date: `April 27, 2018`
+    name: "Chance Eakin",
+    title: "Mrs. Sharpe's Class Presentation",
+    date: "September 18th, 2018"
   },
   pathPrefix: `/ben-talk`,
   plugins: [

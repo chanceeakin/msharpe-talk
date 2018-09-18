@@ -1,20 +1,19 @@
-# gatsby-starter-deck
+# Presentation for Mrs. Sharpe's Technology Class
 
-[![deploys by netlify](https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg)](https://www.netlify.com)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+## Included in this repo:
 
-Create presentations using Gatsby, React & Markdown. Inspired by Guillermo Rauch’s [deck on Next.js](https://deck.now.sh/).
+- presentation slides
+- source code for:
+  - computer vision
+  - fortnite client/server demo
 
-* [Demo](//gatsby-deck.netlify.com)
+## Presentation Slide Usage
 
-## Usage
+Install `gatsby`, then:
 
-    $ gatsby new my-slides https://github.com/fabe/gatsby-starter-deck
-    $ cd my-slides
     $ gatsby develop
 
-Then edit and extend your slides inside the `src/pages` directory. Navigate with the arrow keys.
+## Other demos:
 
-## Author
-
-* Fabian Schultz ([@fschultz\_](https://twitter.com/fschultz_))
+require a golang runtime.
+Visit golang.org for more details.

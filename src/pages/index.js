@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { navigateTo } from 'gatsby-link';
+import React, { Component } from "react";
+import { navigateTo } from "gatsby-link";
 
 class Index extends Component {
   componentDidMount() {
